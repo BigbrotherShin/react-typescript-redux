@@ -1,8 +1,8 @@
 import React from 'react';
-import TodoApp from './container/TodoApp';
+import CounterContainer from './container/CounterContainer';
 
 const App: React.FC = () => {
-  return <TodoApp />;
+  return <CounterContainer />;
 };
 
 export default App;
