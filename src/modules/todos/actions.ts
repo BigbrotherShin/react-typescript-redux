@@ -1,7 +1,4 @@
-import {
-  /* action, */
-  createAction,
-} from 'typesafe-actions';
+import { createAction, action } from 'typesafe-actions';
 
 // 액션 타입 선언
 export const ADD_TODO = 'todos/ADD_TODO';
@@ -15,13 +12,8 @@ let nextId = 1; // 새로운 항목을 추가할 경우 사용할 고유 Id
 // 이 액션 생성 함수의 경우엔 파라미터를 기반하여 커스터마이징된 payload를 설정해주므로,
 // createAction 이라는 함수를 사용합니다.
 // 여기서 action은 액션 객체를 만드는 함수입니다
-export const addTodo = (text: string) => ({
-  type: ADD_TODO,
-  payload: {
-    id: nextId++,
-    text,
-  },
-});
+export const addTodo = (text: string) =>
+  action(ADD_TODO, { id: nextId++, text });
 // 위 코드는 다음과 같은 형태로도 구현 할 수 있지만, createAction 말고 action 만 사용하면
 // Action Helpers (https://www.npmjs.com/package/typesafe-actions#action-helpers-api) 지원이 안됩니다.
 // export const addTodo = (text: string) => action(ADD_TODO, { id: nextId++, text })

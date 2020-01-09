@@ -8,7 +8,7 @@ const initialState: TodosState = [];
 // 리듀서 작성
 const reducer = createReducer<TodosState, TodosAction>(initialState, {
   [ADD_TODO]: (state, action) =>
-    stete.concat({
+    state.concat({
       ...action.payload, // id, text 를 이 안에 넣기
       done: false,
     }),
