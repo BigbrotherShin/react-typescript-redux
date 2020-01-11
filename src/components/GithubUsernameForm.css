@@ -9,7 +9,7 @@
 }
 
 .GithubUsernameForm input {
-  flex: 1;
+  flex: 1; /* 자신이 차지할 수 있는 영역 모두 차지 */
   border: none;
   outline: none;
   border-bottom: 1px solid black;
