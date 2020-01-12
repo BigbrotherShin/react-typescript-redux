@@ -65,3 +65,10 @@ export function createAsyncReducer<
     }
   };
 }
+
+export function transformToArray<AC extends AnyAsyncActionCreator>(
+  asyncActionCreator: AC,
+) {
+  const { request, success, failure } = asyncActionCreator;
+  return [request, success, failure];
+}
