@@ -1,7 +1,6 @@
 import { createAsyncAction } from 'typesafe-actions';
 import { GithubProfile } from '../../api/github';
 import { AxiosError } from 'axios';
-import { GithubState } from './types';
 
 export const GET_USER_PROFILE = 'github/GET_USER_PROFILE';
 export const GET_USER_PROFILE_SUCCESS = 'github/GET_USER_PROFILE_SUCCESS';
@@ -15,4 +14,4 @@ export const getUserProfileAsync = createAsyncAction(
   GET_USER_PROFILE,
   GET_USER_PROFILE_SUCCESS,
   GET_USER_PROFILE_ERROR,
-)<GithubState, GithubProfile, AxiosError>();
+)<string, GithubProfile, AxiosError>();
