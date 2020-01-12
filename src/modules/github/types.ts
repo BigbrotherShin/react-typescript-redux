@@ -7,4 +7,4 @@ export type GithubAction = ActionType<typeof actions>;
 
 export type GithubState = {
   userProfile: AsyncState<GithubProfile, Error>;
-};
+}
